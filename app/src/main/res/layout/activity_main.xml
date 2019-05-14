@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv1"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/left_top" />
+
+        <xyuxiao.scroll.MyHorizontalScrollView
+            android:id="@+id/sv"
+            android:layout_toRightOf="@id/rv1"
+            android:layout_toEndOf="@id/rv1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </xyuxiao.scroll.MyHorizontalScrollView>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
